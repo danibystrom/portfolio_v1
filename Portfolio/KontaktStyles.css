@@ -1,0 +1,226 @@
+body {
+    background-color: #ece7e1;
+}
+
+.main-content-kontakt {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+.card-kontakt {
+    border: 1px black solid;
+    border-radius: 5px; /* Rundar kanterna på kortet */
+    overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+}
+
+.card-kontakt img {
+    max-width: 100%; /* Gör att bilden inte blir större än kortets bredd */
+    display: block; /* Gör att bilden tar upp hela raden */
+    filter:drop-shadow(10px 8px 8px rgba(208, 29, 208, 0.792));
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+.card-kontakt p {
+    padding: 10px; /* Inre marginal runt texten inuti kortet */
+}
+
+
+
+.card2-kontakt {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.card2-kontakt h1 {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    color: #1a1818;
+    margin-right: 20px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 11vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: block;
+    position: relative;
+    margin-bottom: 0%;
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    /* display: block;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    gap: 10px; */
+} 
+
+.button-container a {
+    font-family: Grandslang roman, sans-serif;
+    text-transform: lowercase;
+    font-size: 3vw;
+    font-weight: 500;
+    color: #1a1818;
+    text-align: right;
+    align-items: right;
+    position: absolute;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.container {
+    display: flex; /* Aktiverar Flexbox på container-elementet */
+    height: 100vh; /* Sätter höjden till 100% av skärmens höjd */
+}
+
+.child {
+    color: white;
+    margin-right: 10px; /* Skapa utrymme mellan de horisontella elementen */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ece7e1;
+}
+
+li {
+    float: right;
+}
+
+a {
+    font-family: Grandslang roman, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    color: #1a1818;
+    text-align: center;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.button-container a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.button-container a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.button-container a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.card2-kontakt a {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    text-transform: lowercase;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 50px;
+    display: block;
+    color: #1a1818;
+    text-align: right;
+    align-items: right;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.card2-kontakt a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.card2-kontakt a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.card2-kontakt a:hover::before {
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+footer p {
+    text-align: right;
+    font-family: Grandslang roman, sans-serif;
+    color: #1a1818;
+    text-transform: lowercase;
+    margin-top: 100px;
+}
+
+
+

@@ -1,0 +1,264 @@
+.container {
+    display: flex; /* Aktiverar Flexbox på container-elementet */
+    /*height: 100vh; /* Sätter höjden till 100% av skärmens höjd */
+    flex-wrap: wrap;
+}
+
+/* Grid för huvudinnehåll */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+.card-index {
+    border-radius: 5px; /* Rundar kanterna på kortet */
+    overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+}
+
+.card-index img {
+    max-width: 100%; /* Gör att bilden inte blir större än kortets bredd */
+    display: block; /* Gör att bilden tar upp hela raden */
+    filter:drop-shadow(10px 8px 8px rgba(208, 29, 208, 0.792));
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+.card-index p {
+    padding: 10px; /* Inre marginal runt texten inuti kortet */
+}
+
+
+
+.card2-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card2-index h1 {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    color: #1a1818;
+    margin-right: -400px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 11vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: block;
+    position: relative;
+    margin-bottom: 0%;
+
+}
+
+.card2-index h2 {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    color: #1a1818;
+    margin-right: -400px;
+    text-align: right;
+    text-transform: lowercase;
+    font-size: 5vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: block;
+    position: relative;
+    margin-top: 0;
+}
+
+.card-portfolio h2 {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    color: #1a1818;
+    margin-right: -450px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 5vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: flex;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-portfolio p {
+    font-family: Grandslang roman, sans-serif;
+    /* z-index: 100; */
+    color: #1a1818;
+    margin-right: -200px;
+    text-align: left;
+    text-transform: lowercase;
+    font-size: medium;
+    font-weight: 300;
+    line-height: .95em;
+    display: flex;
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex; /* Aktiverar Flexbox på container-elementet */
+    height: 100vh; /* Sätter höjden till 100% av skärmens höjd */
+}
+
+.child {
+    color: white;
+    margin-right: 10px; /* Skapa utrymme mellan de horisontella elementen */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ece7e1;
+}
+
+li {
+    float: right;
+}
+
+a {
+    font-family: Grandslang roman, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    color: #1a1818;
+    text-align: center;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.card2-index a {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    text-transform: lowercase;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-right: -400px;
+    margin-left: 600px;
+    display: block;
+    color: #1a1818;
+    text-align: right;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.card2-index a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.card2-index a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.card2-index a:hover::before {
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.card-portfolio a {
+    font-family: Grandslang roman, sans-serif;
+    z-index: 100;
+    /* text-transform: lowercase; */
+    font-size: 3vw;
+    /* font-weight: 500; */
+    display: block;
+    color: #1a1818;
+    text-align: left;
+    position: relative;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    background-color: #ece7e1;
+    background: linear-gradient(0deg, rgba(208, 29, 208, 0.792), rgba(208, 29, 208, 0.792)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.card-portfolio a::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(208, 29, 208, 0.792);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.card-portfolio a:is(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.card-portfolio a:hover::before {
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+
+body {
+    background-color: #ece7e1;
+
+}
+
+footer p {
+    text-align: right;
+    font-family: Grandslang roman, sans-serif;
+    color: #1a1818;
+    text-transform: lowercase;
+    margin-top: 100px;
+}
